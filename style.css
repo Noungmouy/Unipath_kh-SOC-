@@ -1,0 +1,506 @@
+    
+    /*====Universal Selector=====*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+main{
+    background-image: url("/Asset/images/background\ copy.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    background-position: center;
+}
+
+        /*========HomePage=========*/
+
+.nav-bar{
+    display: flex;
+    background-color: #003087;
+    justify-content: space-between;
+    padding: 15px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+
+.main-logo {
+    font-size: 1.4rem;
+    font-weight: 800;
+    font-family: 'Syne', sans-serif;
+    color: white;
+    letter-spacing: 1px;}
+
+.nav-link ul{
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+.nav-link ul li a{
+text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    padding: 8px 15px;
+    transition: all 0.3s ease;
+    border-radius: 14px;
+}
+
+span{
+    color: yellow
+}
+
+.nav-link ul li a:hover{
+    background-color: rgb(228, 228, 223);
+    color:black;
+}
+
+.nav-link ul li a.active {
+    background-color: yellow;
+    color: black;
+}
+
+.hero {
+    padding: 80px 24px;
+    text-align: center;
+    align-content: center;
+}
+
+.main-title{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.hero h1{
+    font-size: 3rem;
+    letter-spacing: -2px;
+    color: white;
+}
+
+.hero h1 span{
+    color: yellow;
+}
+
+
+#name-of-city {
+    text-decoration: underline;
+}
+
+     /*====Search bar====*/
+
+.search-bar {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px 0;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 10px;
+}
+
+.input {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border: 2px solid black;
+    border-radius: 999px;
+}
+
+.input:focus {
+    border-color: #3498db;
+}
+
+.search {
+    padding: 12px 20px;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.search:hover {
+    background-color: yellow;
+    color: black;
+    border-color: black;
+}
+
+    /*====The bottom overview====*/
+
+.overview{
+    display: flex;
+    gap: 80px;
+    justify-content: center;
+    margin-top: 100px;
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+}
+.overview p{
+    font-size: 1rem;
+}
+.overview span{
+    color: yellow ;
+}
+
+
+
+            /*======== University Page ======== */
+.section {
+    padding: 60px 10%;
+    text-align: center;
+    /* Centers all text elements */
+    font-family: 'Syne', sans-serif;
+}
+
+.section-label {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #003087;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.section-sub {
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* --- FILTER BUTTONS LAYOUT --- */
+.filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 50px;
+}
+
+.filter-btn {
+    padding: 10px 20px;
+    border: 2px solid #003087;
+    background: transparent;
+    color: #003087;
+    font-weight: 600;
+    border-radius: 30px;
+    /* Pill shape */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+    background-color: #003087;
+    color: white;
+}
+
+.filter-btn.active {
+    background-color: yellow;
+    border-color: yellow;
+    color: black;
+}
+
+.filter-btn:last-child {
+    border-style: dashed;
+}
+
+    /*====All Uni Card====*/
+
+.uni-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+.uni-card,
+section {
+    scroll-margin-top: 90px;
+}
+
+.uni-card {
+    background: white;
+    border: 1.5px solid #bbdefb;
+    border-radius: 16px;
+    overflow: hidden;
+    transition:
+        transform 0.25s,
+        box-shadow 0.25s,
+        border-color 0.25s;
+}
+
+.uni-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 48px rgba(13, 71, 161, 0.12);
+    border-color: #1565c0;
+}
+
+.card-top {
+    padding: 20px 20px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.uni-logo-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.uni-logo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.uni-info {
+    flex: 1;
+}
+
+.uni-name {
+    font-family: "Syne", sans-serif;
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #0d1b2a;
+    line-height: 1.3;
+}
+
+.uni-location {
+    font-size: 0.75rem;
+    color: #78909c;
+    margin-top: 2px;
+}
+
+.scholarship-badge {
+    background: #fff8e1;
+    color: #f57f17;
+    border: 1px solid #ffe082;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 100px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.card-divider {
+    height: 1px;
+    background: #e3f2fd;
+    margin: 14px 20px;
+}
+
+.majors-label {
+    padding: 0 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #78909c;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.major-tags {
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 16px;
+}
+
+.tag {
+    background: #e3f2fd;
+    color: #1565c0;
+    font-size: 0.74rem;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 5px;
+}
+
+.card-footer {
+    padding: 12px 20px;
+    background: #f5f9ff;
+    border-top: 1px solid #e3f2fd;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tuition-label {
+    display: block;
+    font-size: 0.68rem;
+    color: #78909c;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+
+.tuition-price {
+    font-family: "Syne", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #0d1b2a;
+}
+
+.view-btn {
+    background: #1565c0;
+    color: white;
+    padding: 7px 16px;
+    border-radius: 7px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    transition: background 0.2s;
+    text-decoration: none;
+}
+
+.view-btn:hover {
+    background: #0d47a1;
+    color: white;
+    text-decoration: none;
+}
+
+.view-btn:visited {
+    color: white;
+}
+
+
+            /*========== About Page ==========*/
+
+h1{
+    margin: 20px;
+    text-align: center;
+}
+
+.About{
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+}
+
+.instruction{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.step{
+    width: 50px;
+    padding:  15px;
+    border-radius: 20px;
+    background-color:yellow;
+    color: black;
+    font-size: 40px;
+    text-align: center;
+}
+
+.instruction h4{
+    font-size: 30px;
+}
+
+.instruction p{
+    text-align: center;
+    font-size: 24px;
+}
+
+
+            /*========= Contact Page =========*/
+
+    /*==== Get in Touch ====*/
+.container{
+    margin: 50 auto;
+    padding: 0 200px;
+    text-align: center;
+   
+}
+
+    /*==== Send us Message =====*/
+.form-container{
+    margin: 50px auto;
+    padding: 30px;
+    background-color: rgb(243, 240, 240);
+    justify-items: center;
+}
+
+.form-container input{
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+}
+
+#submit{
+    padding: 12px 80px;
+    background-color: yellow;
+    color: black;
+    border: none;
+    border-radius: 10px;
+}
+    /*==== Location and Social media ====*/
+    
+footer{
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+}
+
+
+.footer{
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding:20px;
+    background-color: black;
+    color: white;
+}
+
+.footer p{
+    color: #8d8b89;
+}
+
+.copywrited{
+    text-align: center;
+    color: #8d8b89;
+}
+
+
+.address-email{
+    justify-items: center;
+}
+
+.location {
+    display: flex;
+}
+
+.social-connection{
+    justify-items: center;
+    margin-bottom: 10px;
+}
